@@ -3,6 +3,8 @@ package mutation
 import (
 	"sync"
 
+	"github.com/NavenduDuari/go-blockchain/bcgql/model"
+
 	"github.com/NavenduDuari/go-blockchain/blockchain"
 	"github.com/graphql-go/graphql"
 )
@@ -13,7 +15,7 @@ var RootMutation = graphql.ObjectConfig(graphql.ObjectConfig{
 	Name: "RootMutation",
 	Fields: graphql.Fields{
 		"MineBlock": &graphql.Field{
-			Type: nil,
+			Type: model.Block,
 			Args: graphql.FieldConfigArgument{
 				"Data": &graphql.ArgumentConfig{
 					Type: graphql.Int,

@@ -10,6 +10,9 @@ var Block = graphql.NewObject(graphql.ObjectConfig{
 		"Index": &graphql.Field{
 			Type: graphql.String,
 		},
+		"Data": &graphql.Field{
+			Type: graphql.Int,
+		},
 		"Timestamp": &graphql.Field{
 			Type: graphql.String,
 		},
